@@ -16,3 +16,11 @@ Equipment:
 
 ![Scheme](https://raw.githubusercontent.com/pavelis/AirLogger/master/img/air_logger_bb.png)
 
+## In real life
+
+![Logger](https://raw.githubusercontent.com/pavelis/AirLogger/master/img/logger1.jpg)
+
+![Logger](https://raw.githubusercontent.com/pavelis/AirLogger/master/img/logger2.jpg)
+
+![Logger attached to a drone](https://raw.githubusercontent.com/pavelis/AirLogger/master/img/logger_drone.jpg)
+
