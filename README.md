@@ -1,5 +1,4 @@
-# Air logger
-Autonomous air pollution logger for a drone
+# Autonomous air pollution logger for a drone
 
 ## Concept
 
@@ -9,10 +8,11 @@ Equipment:
 * Arduino Pro Mini with ATmega328P, 3.3V, 8 MHz
 * PMS5003 sensor
 * BME280 sensor
-* MicroSD module
+* MicroSD module + MicroSD card (I use a 1-GB FAT16-formated card)
 * DC-DC step-up converter @5V
 * Lithium battery
 * Plastic box
+* Double-sided scotch tape
 
 ![Scheme](https://raw.githubusercontent.com/pavelis/AirLogger/master/img/air_logger_bb.png)
 
