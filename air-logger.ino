@@ -49,13 +49,13 @@ void setup() {
 
   datafile = SD.open(filename, FILE_WRITE);
   if (datafile) {
-    datafile.println(F("Altitude_m;Temperature_degC;Humidity_%;Pressure_hPa;PM1_ug/m3;PM2.5_ug/m3;PM10_ug/m3"));
+    datafile.println(F("Seconds;Altitude_m;Temperature_degC;Humidity_%;Pressure_hPa;PM1_ug/m3;PM2.5_ug/m3;PM10_ug/m3"));
     datafile.close();
   }
   else
     Serial.println("Error opening " + filename);
 
-  Serial.println(F("Altitude_m;Temperature_degC;Humidity_%;Pressure_hPa;PM1_ug/m3;PM2.5_ug/m3;PM10_ug/m3"));
+  Serial.println(F("Seconds;Altitude_m;Temperature_degC;Humidity_%;Pressure_hPa;PM1_ug/m3;PM2.5_ug/m3;PM10_ug/m3"));
   delay(5000);
 }
 
@@ -75,11 +75,11 @@ void loop() {
     // Delta is an elevation from start point
     delta = altitude - initialAltitude;
 
-    Serial.println(String(delta) + ";" + String(temperature) + ";" + String(humidity) + ";" + String(pressure) + ";" + String(data.PM_AE_UG_1_0) + ";" + String(data.PM_AE_UG_2_5) + ";" + String(data.PM_AE_UG_10_0));
+    Serial.println(String(millis()/1000) + ";" + String(delta) + ";" + String(temperature) + ";" + String(humidity) + ";" + String(pressure) + ";" + String(data.PM_AE_UG_1_0) + ";" + String(data.PM_AE_UG_2_5) + ";" + String(data.PM_AE_UG_10_0));
 
     datafile = SD.open(filename, FILE_WRITE);
     if (datafile) {
-      datafile.println(String(delta) + ";" + String(temperature) + ";" + String(humidity) + ";" + String(pressure) + ";" + String(data.PM_AE_UG_1_0) + ";" + String(data.PM_AE_UG_2_5) + ";" + String(data.PM_AE_UG_10_0));
+      datafile.println(String(millis()/1000) + ";" + String(delta) + ";" + String(temperature) + ";" + String(humidity) + ";" + String(pressure) + ";" + String(data.PM_AE_UG_1_0) + ";" + String(data.PM_AE_UG_2_5) + ";" + String(data.PM_AE_UG_10_0));
       datafile.close();
     }
     else
